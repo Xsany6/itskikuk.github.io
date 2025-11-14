@@ -1,5 +1,5 @@
 # 🍑 Kikuk Kikuk Website 🤓
-## Situs Resmi Kelompok Paling... *Unik* di Jagat Maya!
+## Situs Resmi Kelompok Paling. *Unik* *Kikuk_bumbum!*
 
 [![Status Website](https://img.shields.io/badge/Status-LIVE-brightgreen?style=for-the-badge&logo=vercel)](https://itskikuk.my.id)
 [![Ikuti Kami di Instagram](https://img.shields.io/badge/Instagram-@kikuk__bumbum-purple?style=for-the-badge&logo=instagram)](https://instagram.com/kikuk_bumbum)
