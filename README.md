@@ -15,18 +15,3 @@ Selamat datang di repositori untuk website **Kelompok Kikuk Kikuk 🍑**! Ini ad
 Website ini adalah portofolio untuk Kelompok Kikuk Kikuk. Tujuannya untuk mendokumentasikan perjalanan dan proyek kolaboratif kami, dengan sedikit sentuhan humor untuk menghilangkan ketegangan *coding*!
 
 
-## 💖 Bergabung dengan Kekikukan
-
-Kami terbuka untuk kolaborasi! Jika Anda menemukan *bug* atau ingin menyumbangkan ide yang *super kikuk*.
-
----
-
-## 📜 Lisensi
-
-Proyek ini didistribusikan di bawah Lisensi [@2025 Lisensi, Kikuk_bumbum]. Lihat file `LICENSE` untuk informasi lebih lanjut.
-
----
-
-***
-
-Semoga berhasil dengan repositori Anda! Apakah Anda ingin saya membuatkan draf *Pull Request template* yang juga bernuansa kikuk?
