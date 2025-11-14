@@ -1,4 +1,4 @@
-# 🍑 Kikuk Kikuk Website 🤓
+# 🍑 Kikuk Kikuk Website
 ## Situs Resmi Kelompok Paling Unik. *Kikuk_bumbum!*
 
 [![Status Website](https://img.shields.io/badge/Status-LIVE-brightgreen?style=for-the-badge&logo=vercel)](https://itskikuk.my.id)
@@ -10,7 +10,7 @@ Selamat datang di repositori untuk website **Kelompok Kikuk Kikuk 🍑**! Ini ad
 
 ---
 
-## 🧐 Tentang Proyek Ini
+## 🍑 Tentang Proyek Ini
 
 Website ini adalah portofolio untuk Kelompok Kikuk Kikuk. Tujuannya untuk mendokumentasikan perjalanan dan proyek kolaboratif kami, dengan sedikit sentuhan humor untuk menghilangkan ketegangan *coding*!
 
