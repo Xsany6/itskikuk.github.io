@@ -28,6 +28,12 @@ document.querySelectorAll('.team-card, .news-card, .recommendation-card').forEac
 burger.addEventListener('click', () => {
     navLinksContainer.classList.toggle('active');
     burger.classList.toggle('active');
+    // Update accessibility state
+    try {
+        burger.setAttribute('aria-expanded', burger.classList.contains('active'));
+    } catch (e) {
+        // ignore if attribute not supported
+    }
 });
 
 // Enhanced navigation with smooth transitions
@@ -137,6 +143,7 @@ document.addEventListener('click', (e) => {
     if (!navLinksContainer.contains(e.target) && !burger.contains(e.target) && navLinksContainer.classList.contains('active')) {
         navLinksContainer.classList.remove('active');
         burger.classList.remove('active');
+        try { burger.setAttribute('aria-expanded', 'false'); } catch(e) {}
     }
 });
 
@@ -145,6 +152,7 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navLinksContainer.classList.contains('active')) {
         navLinksContainer.classList.remove('active');
         burger.classList.remove('active');
+        try { burger.setAttribute('aria-expanded', 'false'); } catch(e) {}
     }
 });
 

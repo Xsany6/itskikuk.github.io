@@ -12,7 +12,7 @@
   <!-- Memuat Google Font (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700 object-cover;900&display=swap" rel="stylesheet">
 
   <style>
     /* Style dasar untuk font dan latar belakang */
@@ -26,6 +26,9 @@
     /* Warna aksen kustom dari CSS asli Anda */
     .text-accent {
       color: #e8dcc4;
+    }
+    .bg-accent {
+      background-color: #e8dcc4;
     }
     .border-accent {
       border-color: #e8dcc4;
@@ -68,16 +71,7 @@
     }
 
     /* Loading Page */
-    #loading {
-      background: #0a0a0a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    #loading.hidden {
-      display: none;
-    }
+    /* Loading Page (removed) */
 
     /* Typing Animation */
     .typing-cursor::after {
@@ -93,13 +87,7 @@
 
 <body class="antialiased">
 
-  <!-- Loading Page -->
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-black text-accent text-2xl font-bold">
-    <div class="text-center">
-      <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-accent mb-4"></div>
-      <p>Loading...</p>
-    </div>
-  </div>
+  <!-- Loading page removed -->
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-gray-800">
@@ -156,7 +144,7 @@
               Kelompok Kikuk Kikuk
             </h1>
             <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              Dibentuk oleh M. Raihan Al Irsyad pada 21 November 2023, "Grup [Nama Grup Anda]" adalah wadah transformatif. Kami hadir untuk menumbuhkan fondasi kebersamaan yang kuat, memastikan setiap suara didengar melalui komunikasi yang efektif, dan secara kolektif mendorong setiap proyek menuju keberhasilan. Bergabunglah dengan kami, di mana kolaborasi adalah kekuatan!
+              Dibentuk oleh M. Raihan Al Irsyad pada 21 November 2023, "Kikuk Kikuk🍑🍑" adalah wadah transformatif. Kami hadir untuk menumbuhkan fondasi kebersamaan yang kuat, memastikan setiap suara didengar melalui komunikasi yang efektif, dan secara kolektif mendorong setiap proyek menuju keberhasilan. Bergabunglah dengan kami, di mana kolaborasi adalah kekuatan!
             </p>
 
             <!-- Stats -->
@@ -220,43 +208,43 @@
                 <!-- Contoh Kartu Anggota Tim -->
                 <!-- Anda bisa mengulangi blok ini untuk setiap anggota -->
                 <a href="view/m_raihan_al_irsyad.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/m_raihan_al_irsyad.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/m_raihan_al_irsyad.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">M. Raihan Al Irsyad</h3>
                     <p class="text-gray-400">Admin</p>
                 </a>
                  <a href="view/muhamad_rizki_firmansyah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhamad_rizki_firmansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/muhamad_rizki_firmansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Muhamad Rizki F.</h3>
                     <p class="text-gray-400">Wakil admin</p>
                 </a>
                  <a href="view/muhammad_ariel_dwi_ardiansyah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Muhammad Ariel D. A.</h3>
                     <p class="text-gray-400">Keamanan</p>
                 </a>
                  <a href="view/rizkyan_dwi_fahrizah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/rizkyan_dwi_fahrizah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/rizkyan_dwi_fahrizah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Rizkyan Dwi Fahrizah</h3>
                     <p class="text-gray-400">Wakil admin</p>
                 </a>
                 <!-- Ulangi kartu untuk 4 anggota lainnya -->
                  <a href="view/mishbahul_ma_arif_al_jaly.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Mishbahul M. A. J.</h3>
                     <p class="text-gray-400">Wakil admin</p>
                 </a>
                  <a href="view/muhammad_fathoni_firdaus.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_fathoni_firdaus.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/muhammad_fathoni_firdaus.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Muhammad Fathoni F.</h3>
                     <p class="text-gray-400">Admin instagram</p>
                 </a>
                  <a href="view/muhammad_andreas_athallah_saifa_anam.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Muhammad Andreas A.</h3>
                     <p class="text-gray-400">juru koding</p>
                 </a>
                  <a href="view/rasya_aautar_ramadhani.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/rasya_aautar_ramadhani.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700">
+                    <img src="images/anggota/rasya_aautar_ramadhani.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
                     <h3 class="text-xl font-bold text-accent mb-1">Rasya Aautar R.</h3>
                     <p class="text-gray-400">admin instagram</p>
                 </a>
@@ -275,10 +263,13 @@
 
 
   <script>
+    
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.getElementById('burger');
       const navLinks = document.getElementById('navLinks');
-      
+      const y = new Date().getFullYear();
+      const p = document.querySelector('p.text-gray-500');
+      if (p) p.innerHTML = `&copy; ${y} Kelompok Kikuk Kikuk. Dibuat dengan sepenuh hati.`;
       const desktopNavLinks = document.querySelectorAll('.nav-link');
       const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
       const allNavLinks = [...desktopNavLinks, ...mobileNavLinks];
@@ -354,9 +345,7 @@
       }, 2000);
 
       // Sembunyikan loading setelah seluruh halaman selesai dimuat
-      window.addEventListener('load', () => {
-        document.getElementById('loading').classList.add('hidden');
-      });
+      // Loading overlay removed — no action required on window load
     });
   </script>
 
