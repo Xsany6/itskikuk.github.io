@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documentation - Kelompok Kikuk Kikuk</title>
+        <link rel="stylesheet" href="dokumentasi/style.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo">PORTFOLIO</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#team" class="nav-link">Team</a></li>
+                    <li><a href="documentation.html"
+                            class="nav-link active">Documentation</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Documentation</h1>
+                <p>Dokumentasi kegiatan Kelompok Kikuk Kikuk</p>
+            </div>
+            <div class="scroll-indicator"></div>
+        </section>
+
+        <!-- Documentation Section -->
+        <section class="page-section">
+            <div class="section-title">
+                <h2>Dokumentasi Kegiatan</h2>
+                <p>Rekaman perjalanan dan pencapaian tim kami</p>
+            </div>
+
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-thumbnail">
+                        <img src="/dokumentasi/1762099843955.jpg"
+                            alt="Pendakian Gunung Bukit Premium">
+                    </div>
+                    <div class="doc-content">
+                        <span class="doc-category">Outdoor Activity</span>
+                        <h3 class="doc-title">Pendakian Gunung Bukit
+                            Premium</h3>
+                        <p class="doc-date">Tanggal: 31 Oktober 2025</p>
+                        <p class="doc-description">Kegiatan pendakian gunung
+                            bersama tim Kelompok Kikuk Kikuk ke Bukit Premium.
+                            Aktivitas ini bertujuan untuk mempererat solidaritas
+                            tim dan menikmati keindahan alam sambil
+                            berolahraga.</p>
+                        <div class="doc-actions">
+                            <a
+                                href="https://www.google.com/maps/dir/Kandangsari/Bukit+Premium"
+                                target="_blank"
+                                class="doc-button maps-button">📍 Lihat Rute
+                                Maps</a>
+                            <a href="#" class="doc-button">Lihat Detail →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-thumbnail">
+                        <img src="/dokumentasi/IMG_20251107_164816.jpg"
+                            alt="Team Building Event">
+                    </div>
+                    <div class="doc-content">
+                        <span class="doc-category">Team Building</span>
+                        <h3 class="doc-title">📸 YearBook 2025: Momen
+                            Kebersamaan Tim</h3> 
+                            <p class="doc-date">Tanggal: 7 November 2025</p> 
+                            <p class="doc-description">
+                            Acara Team Building spesial untuk mengukir kenangan dan
+                            memperkuat ikatan antar anggota tim. Melalui
+                            berbagai kegiatan seru dan inspiratif, mari kita
+                            tingkatkan solidaritas, kreativitas, dan semangat
+                            kolaborasi untuk tahun yang akan datang.</p>
+                        <a href="" class="doc-button">Lihat Detail →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Kelompok Kikuk Kikuk. All rights reserved.</p>
+        </footer>
+
+        <script>
+        // Mobile Navigation Toggle
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for scroll indicator
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            document.querySelector('.page-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+    </body>
+</html>
