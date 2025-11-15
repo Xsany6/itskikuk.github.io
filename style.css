@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
 .contact-info a {
     text-decoration: none;
     color: white; 
@@ -14,14 +21,6 @@
     color: #cccccc; 
     text-decoration: underline; 
 }
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
 /* Navigation */
 nav {
     position: fixed;
