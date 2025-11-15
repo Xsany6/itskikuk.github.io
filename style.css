@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.contact-info a {
+    text-decoration: none;
+    color: white; 
+}
+
+
+.contact-info a:hover {
+    color: #cccccc; 
+    text-decoration: underline; 
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #0a0a0a;
