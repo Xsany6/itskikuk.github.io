@@ -1,0 +1,46 @@
+# As a condition of accessing this website, you agree to abide by the following
+# content signals:
+
+# ... (Instruksi Content Signals tetap sama) ...
+
+# BEGIN Cloudflare Managed content
+
+User-Agent: *
+Content-signal: search=yes,ai-train=no
+Allow: /
+Sitemap: https://itskikuk.my.id/sitemap.xml
+
+User-agent: Amazonbot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Applebot-Extended
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Bytespider
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: CCBot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: ClaudeBot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Google-Extended
+Disallow: /
+Allow: /sitemap.xml 
+Sitemap: https://itskikuk.my.id/sitemap.xml
+
+User-agent: GPTBot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: meta-externalagent
+Disallow: /
+Allow: /sitemap.xml
+
+# END Cloudflare Managed Content
