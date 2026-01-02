@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - Kelompok Kikuk Kikuk</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    .text-accent { color: #e8dcc4; }
+    .border-accent { border-color: #e8dcc4; }
+    
+    .burger span {
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .burger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+    .burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* Optimized card transitions */
+    .team-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(232, 220, 196, 0.25);
+    }
+
+    /* Fade in animation */
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-2xl font-extrabold text-accent tracking-wider">PORTFOLIO</a>
+        </div>
+
+        <div class="hidden md:flex md:items-center md:space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Home</a>
+          <a href="team.html" class="text-accent hover:text-white transition-colors font-bold">Team</a>
+          <a href="documentation.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Documentation</a>
+          <a href="news.html" class="text-gray-300 hover:text-accent transition-colors font-medium">News</a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button class="burger flex flex-col space-y-1.5" id="burger" aria-label="Menu">
+            <span class="w-6 h-0.5 bg-accent rounded-full"></span>
+            <span class="w-6 h-0.5 bg-accent rounded-full"></span>
+            <span class="w-6 h-0.5 bg-accent rounded-full"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden hidden" id="navLinks">
+      <div class="px-2 pt-2 pb-4 space-y-2 sm:px-3 border-t border-gray-800">
+        <a href="index.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="team.html" class="text-accent hover:text-white transition-colors block px-3 py-2 rounded-md text-base font-bold">Team</a>
+        <a href="documentation.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">Documentation</a>
+        <a href="news.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">News</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Team Section -->
+  <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto w-full">
+      
+      <!-- Header -->
+      <div class="text-center mb-16 fade-in">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-accent mb-6">Tim Kami</h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          Perkenalkan anggota-anggota hebat di balik Kelompok Kikuk Kikuk. Setiap individu membawa keahlian unik yang memperkuat tim kami.
+        </p>
+      </div>
+      
+      <!-- Team Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Member 1 -->
+        <a href="view/m_raihan_al_irsyad.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/m_raihan_al_irsyad.jpg" 
+              alt="M. Raihan Al Irsyad" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">M. Raihan Al Irsyad</h3>
+            <p class="text-gray-400 text-sm">Admin</p>
+          </div>
+        </a>
+
+        <!-- Member 2 -->
+        <a href="view/muhamad_rizki_firmansyah.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/muhamad_rizki_firmansyah.jpg" 
+              alt="Muhamad Rizki Firmansyah" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Muhamad Rizki F.</h3>
+            <p class="text-gray-400 text-sm">King Shiso</p>
+          </div>
+        </a>
+
+        <!-- Member 3 -->
+        <a href="view/muhammad_ariel_dwi_ardiansyah.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" 
+              alt="Muhammad Ariel Dwi Ardiansyah" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Ariel D. A.</h3>
+            <p class="text-gray-400 text-sm">Keamanan</p>
+          </div>
+        </a>
+
+        <!-- Member 4 -->
+        <a href="view/rizkyan_dwi_fahrizah.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/rizkyan_dwi_fahrizah.jpg" 
+              alt="Rizkyan Dwi Fahrizah" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Rizkyan Dwi Fahrizah</h3>
+            <p class="text-gray-400 text-sm">Wakil Admin</p>
+          </div>
+        </a>
+
+        <!-- Member 5 -->
+        <a href="view/mishbahul_ma_arif_al_jaly.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" 
+              alt="Mishbahul ma'arif al jaly" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Mishbahul M. A. J.</h3>
+            <p class="text-gray-400 text-sm">Wakil Admin</p>
+          </div>
+        </a>
+
+        <!-- Member 6 -->
+        <a href="view/muhammad_fathoni_firdaus.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/muhammad_fathoni_firdaus.jpg" 
+              alt="Muhammad Fathoni Firdaus" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Fathoni F.</h3>
+            <p class="text-gray-400 text-sm">Admin Instagram</p>
+          </div>
+        </a>
+
+        <!-- Member 7 -->
+        <a href="view/muhammad_andreas_athallah_saifa_anam.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" 
+              alt="Muhammad Andreas Athallah Saifa Anam" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Andreas A.</h3>
+            <p class="text-gray-400 text-sm">Juru Koding</p>
+          </div>
+        </a>
+
+        <!-- Member 8 -->
+        <a href="view/rasya_aautar_ramadhani.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
+          <div class="aspect-square overflow-hidden">
+            <img 
+              src="images/anggota/rasya_aautar_ramadhani.jpg" 
+              alt="Rasya Aautar Ramadhani" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-bold text-accent mb-2">Rasya Aautar R.</h3>
+            <p class="text-gray-400 text-sm">Admin Instagram</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Back to Home CTA -->
+      <div class="mt-16 text-center">
+        <a href="index.html" class="inline-block bg-accent text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-300 hover:-translate-y-1">
+          ← Kembali ke Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/50 border-t border-gray-800 mt-20">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-500">&copy; <span id="year">2024</span> Kelompok Kikuk Kikuk. Dibuat dengan sepenuh hati.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      navLinks.classList.toggle('hidden');
+    });
+
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+        navLinks.classList.add('hidden');
+        burger.classList.remove('active');
+      }
+    });
+
+    // Stagger fade-in animation for cards
+    const cards = document.querySelectorAll('.team-card');
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+      card.classList.add('fade-in');
+    });
+  </script>
+
+</body>
+</html>
