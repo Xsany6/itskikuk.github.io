@@ -6,41 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Portfolio - Kelompok Kikuk Kikuk</title>
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-  <!-- Memuat Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Memuat Google Font (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700 object-cover;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* Style dasar untuk font dan latar belakang */
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0a0a0a;
-      color: #f1f5f9; /* Sedikit lebih cerah dari putih murni */
+      color: #f1f5f9;
       overflow-x: hidden;
     }
 
-    /* Warna aksen kustom dari CSS asli Anda */
-    .text-accent {
-      color: #e8dcc4;
-    }
-    .bg-accent {
-      background-color: #e8dcc4;
-    }
-    .border-accent {
-      border-color: #e8dcc4;
-    }
-    .shadow-accent {
-      box-shadow: 0 10px 30px rgba(232, 220, 196, 0.2);
-    }
-    .hover-shadow-accent:hover {
-      box-shadow: 0 0 20px rgba(232, 220, 196, 0.4);
-    }
-
-    /* Animasi untuk Burger Menu */
+    .text-accent { color: #e8dcc4; }
+    .bg-accent { background-color: #e8dcc4; }
+    .border-accent { border-color: #e8dcc4; }
+    .shadow-accent { box-shadow: 0 10px 30px rgba(232, 220, 196, 0.2); }
+    
     .burger span {
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
@@ -54,7 +38,6 @@
       transform: rotate(-45deg) translate(5px, -6px);
     }
 
-    /* Animasi untuk Scroll Indicator */
     .scroll-indicator {
       animation: bounce 2s infinite;
     }
@@ -70,10 +53,6 @@
       }
     }
 
-    /* Loading Page */
-    /* Loading Page (removed) */
-
-    /* Typing Animation */
     .typing-cursor::after {
       content: '|';
       animation: blink 1s infinite;
@@ -82,32 +61,36 @@
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
+
+    /* Optimized button hover */
+    .cta-button {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(232, 220, 196, 0.3);
+    }
   </style>
 </head>
 
 <body class="antialiased">
-
-  <!-- Loading page removed -->
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         
-        <!-- Logo -->
         <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-extrabold text-accent tracking-wider">PORTFOLIO</a>
+          <a href="index.html" class="text-2xl font-extrabold text-accent tracking-wider">PORTFOLIO</a>
         </div>
 
-        <!-- Nav Links (Desktop) -->
         <div class="hidden md:flex md:items-center md:space-x-8">
-          <a href="#" class="nav-link text-gray-300 hover:text-accent transition-colors font-medium active" data-page="home">Home</a>
-          <a href="#" class="nav-link text-gray-300 hover:text-accent transition-colors font-medium" data-page="team">Team</a>
+          <a href="index.html" class="text-accent hover:text-white transition-colors font-bold">Home</a>
+          <a href="team.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Team</a>
           <a href="documentation.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Documentation</a>
           <a href="news.html" class="text-gray-300 hover:text-accent transition-colors font-medium">News</a>
         </div>
 
-        <!-- Burger Menu (Mobile) -->
         <div class="md:hidden flex items-center">
           <button class="burger flex flex-col space-y-1.5" id="burger">
             <span class="w-6 h-0.5 bg-accent rounded-full"></span>
@@ -118,215 +101,98 @@
       </div>
     </div>
 
-    <!-- Mobile Menu (Dropdown) -->
     <div class="md:hidden hidden" id="navLinks">
       <div class="px-2 pt-2 pb-4 space-y-2 sm:px-3 border-t border-gray-800">
-        <a href="#" class="nav-link-mobile text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium active" data-page="home">Home</a>
-        <a href="#" class="nav-link-mobile text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium" data-page="team">Team</a>
+        <a href="index.html" class="text-accent hover:text-white transition-colors block px-3 py-2 rounded-md text-base font-bold">Home</a>
+        <a href="team.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">Team</a>
         <a href="documentation.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">Documentation</a>
         <a href="news.html" class="text-gray-300 hover:text-accent transition-colors block px-3 py-2 rounded-md text-base font-medium">News</a>
       </div>
     </div>
   </nav>
 
-  <!-- Konten Halaman Utama -->
+  <!-- Hero Section -->
   <main>
-    <!-- Hero Section -->
-    <section class="page-section min-h-screen flex items-center justify-center relative pt-28 pb-20 px-4 sm:px-6 lg:px-8" id="home">
+    <section class="min-h-screen flex items-center justify-center relative pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto w-full">
         
-        <!-- Tata Letak Hero (Grid 2 Kolom) -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          <!-- Kolom Teks (Kiri di Desktop) -->
+          <!-- Text Column -->
           <div class="flex flex-col justify-center text-center lg:text-left">
             <h1 id="typing-title" class="text-4xl sm:text-5xl md:text-7xl font-black text-accent uppercase tracking-tighter typing-cursor">
               Kelompok Kikuk Kikuk
             </h1>
             <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              Dibentuk oleh M. Raihan Al Irsyad pada 21 November 2023, "Kikuk Kikuk🍑🍑" adalah wadah transformatif. Kami hadir untuk menumbuhkan fondasi kebersamaan yang kuat, memastikan setiap suara didengar melalui komunikasi yang efektif, dan secara kolektif mendorong setiap proyek menuju keberhasilan. Bergabunglah dengan kami, di mana kolaborasi adalah kekuatan!
+              Dibentuk oleh M. Raihan Al Irsyad pada 21 November 2023, "Kikuk Kikuk👍🏻" adalah wadah transformatif. Kami hadir untuk menumbuhkan fondasi kebersamaan yang kuat, memastikan setiap suara didengar melalui komunikasi yang efektif, dan secara kolektif mendorong setiap proyek menuju keberhasilan.
             </p>
 
             <!-- Stats -->
             <div class="mt-10 flex justify-center lg:justify-start gap-8 sm:gap-12">
-              <div class="flex flex-col items-center text-center animate-pulse">
+              <div class="flex flex-col items-center text-center">
                 <span class="text-4xl lg:text-5xl font-extrabold text-accent">8</span>
                 <span class="mt-2 text-xs uppercase tracking-widest text-gray-500">Anggota Tim</span>
               </div>
-              <div class="flex flex-col items-center text-center animate-pulse">
+              <div class="flex flex-col items-center text-center">
                 <span class="text-4xl lg:text-5xl font-extrabold text-accent">2023</span>
                 <span class="mt-2 text-xs uppercase tracking-widest text-gray-500">Tahun Berdiri</span>
               </div>
-              <div class="flex flex-col items-center text-center animate-pulse">
+              <div class="flex flex-col items-center text-center">
                 <span class="text-4xl lg:text-5xl font-extrabold text-accent">&infin;</span>
                 <span class="mt-2 text-xs uppercase tracking-widest text-gray-500">Kebersamaan</span>
               </div>
             </div>
+
+            <!-- CTA Button -->
+            <div class="mt-10 flex justify-center lg:justify-start">
+              <a href="team.html" class="cta-button inline-block bg-accent text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white">
+                Lihat Tim Kami →
+              </a>
+            </div>
           </div>
           
-          <!-- Kolom Gambar (Kanan di Desktop) -->
+          <!-- Image Column -->
           <div class="flex items-center justify-center lg:order-last order-first">
             <img
               src="images/group-photo.jpg"
               alt="Foto Bersama Kelompok Kikuk Kikuk"
               class="rounded-2xl border-4 border-accent shadow-accent w-full max-w-2xl aspect-video object-cover"
+              loading="lazy"
               onerror="this.src='https://placehold.co/700x450/1a1a1a/e8dcc4?text=Gagal+Memuat+Gambar'"
             >
           </div>
         </div>
-
-        <!-- Preview Tim (Avatar) -->
-        <div class="mt-20 lg:mt-28">
-          <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <!-- Ganti 'src' dengan path gambar yang benar atau gunakan placeholder -->
-            <a href="view/m_raihan_al_irsyad.html"><img src="images/anggota/m_raihan_al_irsyad.jpg" alt="M. Raihan Al Irsyad" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/muhamad_rizki_firmansyah.html"><img src="images/anggota/muhamad_rizki_firmansyah.jpg" alt="Muhamad Rizki Firmansyah" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/muhammad_ariel_dwi_ardiansyah.html"><img src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" alt="Muhammad Ariel Dwi Ardiansyah" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/rizkyan_dwi_fahrizah.html"><img src="images/anggota/rizkyan_dwi_fahrizah.jpg" alt="Rizkyan Dwi Fahrizah" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/mishbahul_ma_arif_al_jaly.html"><img src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" alt="Mishbahul ma'arif al jaly" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/muhammad_fathoni_firdaus.html"><img src="images/anggota/muhammad_fathoni_firdaus.jpg" alt="Muhammad Fathoni Firdaus" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/muhammad_andreas_athallah_saifa_anam.html"><img src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" alt="Muhammad Andreas Athallah Saifa Anam" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-            <a href="view/rasya_aautar_ramadhani.html"><img src="images/anggota/rasya_aautar_ramadhani.jpg" alt="Rasya Aautar Ramadhani" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-accent transition-all duration-300 ease-in-out hover:scale-110 hover-shadow-accent"></a>
-          </div>
-        </div>
       </div>
       
-      <!-- Indikator Scroll -->
-      <div class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 text-accent text-4xl">
+      <!-- Scroll Indicator -->
+      <a href="team.html" class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 text-accent text-4xl cursor-pointer">
         ↓
-      </div>
+      </a>
     </section>
-    
-    <!-- Team Section (Contoh, awalnya tersembunyi) -->
-    <section class="page-section min-h-screen hidden pt-28 pb-20 px-4 sm:px-6 lg:px-8" id="team">
-        <div class="max-w-7xl mx-auto w-full text-center">
-            <h2 class="text-4xl sm:text-5xl font-black text-accent mb-6">Tim Kami</h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-16">Perkenalkan anggota-anggota hebat di balik Kelompok Kikuk Kikuk.</p>
-            
-            <!-- Grid Tim -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Contoh Kartu Anggota Tim -->
-                <!-- Anda bisa mengulangi blok ini untuk setiap anggota -->
-                <a href="view/m_raihan_al_irsyad.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/m_raihan_al_irsyad.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">M. Raihan Al Irsyad</h3>
-                    <p class="text-gray-400">Admin</p>
-                </a>
-                 <a href="view/muhamad_rizki_firmansyah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhamad_rizki_firmansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Muhamad Rizki F.</h3>
-                    <p class="text-gray-400">King Shiso</p>
-                </a>
-                 <a href="view/muhammad_ariel_dwi_ardiansyah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Muhammad Ariel D. A.</h3>
-                    <p class="text-gray-400">Keamanan</p>
-                </a>
-                 <a href="view/rizkyan_dwi_fahrizah.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/rizkyan_dwi_fahrizah.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Rizkyan Dwi Fahrizah</h3>
-                    <p class="text-gray-400">Wakil admin</p>
-                </a>
-                <!-- Ulangi kartu untuk 4 anggota lainnya -->
-                 <a href="view/mishbahul_ma_arif_al_jaly.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Mishbahul M. A. J.</h3>
-                    <p class="text-gray-400">Wakil admin</p>
-                </a>
-                 <a href="view/muhammad_fathoni_firdaus.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_fathoni_firdaus.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Muhammad Fathoni F.</h3>
-                    <p class="text-gray-400">Admin instagram</p>
-                </a>
-                 <a href="view/muhammad_andreas_athallah_saifa_anam.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Muhammad Andreas A.</h3>
-                    <p class="text-gray-400">juru koding</p>
-                </a>
-                 <a href="view/rasya_aautar_ramadhani.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:border-accent block">
-                    <img src="images/anggota/rasya_aautar_ramadhani.jpg" alt="Foto Anggota" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                    <h3 class="text-xl font-bold text-accent mb-1">Rasya Aautar R.</h3>
-                    <p class="text-gray-400">admin instagram</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="bg-black/50 border-t border-gray-800 mt-20">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gray-500">&copy; 2024 Kelompok Kikuk Kikuk. Dibuat dengan sepenuh hati.</p>
+      <p class="text-gray-500">&copy; <span id="year">2024</span> Kelompok Kikuk Kikuk. Dibuat dengan sepenuh hati.</p>
     </div>
   </footer>
 
-
   <script>
-    
     document.addEventListener('DOMContentLoaded', () => {
+      // Burger menu
       const burger = document.getElementById('burger');
       const navLinks = document.getElementById('navLinks');
-      const y = new Date().getFullYear();
-      const p = document.querySelector('p.text-gray-500');
-      if (p) p.innerHTML = `&copy; ${y} Kelompok Kikuk Kikuk. Dibuat dengan sepenuh hati.`;
-      const desktopNavLinks = document.querySelectorAll('.nav-link');
-      const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
-      const allNavLinks = [...desktopNavLinks, ...mobileNavLinks];
       
-      const pageSections = document.querySelectorAll('.page-section');
-
-      // Fungsi untuk toggle menu mobile
       burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         navLinks.classList.toggle('hidden');
       });
 
-      // Fungsi untuk navigasi halaman
-      const setActivePage = (pageId) => {
-        // Sembunyikan semua section
-        pageSections.forEach(section => {
-          section.classList.add('hidden');
-        });
-        
-        // Tampilkan section yang sesuai
-        const activeSection = document.getElementById(pageId);
-        if (activeSection) {
-          activeSection.classList.remove('hidden');
-        }
+      // Update year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Set link aktif di nav
-        allNavLinks.forEach(link => {
-          if (link.dataset.page === pageId) {
-            link.classList.add('active', 'text-accent', 'font-bold');
-            link.classList.remove('text-gray-300', 'font-medium');
-          } else {
-            link.classList.remove('active', 'text-accent', 'font-bold');
-            link.classList.add('text-gray-300', 'font-medium');
-          }
-        });
-        
-        // Tutup menu mobile setelah klik
-        burger.classList.remove('active');
-        navLinks.classList.add('hidden');
-      };
-
-      // Tambahkan event listener ke semua link navigasi
-      allNavLinks.forEach(link => {
-        // Hanya proses link yang punya data-page (internal link)
-        if (link.dataset.page) {
-          link.addEventListener('click', (e) => {
-            e.preventDefault(); // Mencegah pindah halaman
-            const pageId = link.dataset.page;
-            setActivePage(pageId);
-          });
-        }
-      });
-
-      // Set halaman default (home) saat memuat
-      setActivePage('home');
-
-      // Typing Animation untuk Title
+      // Typing animation
       const typingTitle = document.getElementById('typing-title');
       const text = 'Kelompok Kikuk Kikuk';
       let index = 0;
@@ -339,13 +205,15 @@
         }
       }
 
-      // Mulai typing animation setelah 2 detik
-      setTimeout(() => {
-        typeWriter();
-      }, 2000);
+      setTimeout(typeWriter, 500);
 
-      // Sembunyikan loading setelah seluruh halaman selesai dimuat
-      // Loading overlay removed — no action required on window load
+      // Close mobile menu on outside click
+      document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+          navLinks.classList.add('hidden');
+          burger.classList.remove('active');
+        }
+      });
     });
   </script>
 
