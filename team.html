@@ -23,8 +23,19 @@
     .text-accent { color: #e8dcc4; }
     .border-accent { border-color: #e8dcc4; }
     
+    .burger {
+      background:#e8dcc4(232, 220, 196, 0.1);
+      padding: 8px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .burger:hover {
+      background: #e8dcc4(232, 220, 196, 0.2);
+    }
     .burger span {
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      height: 4px;
+      background-color: #e8dcc4;
     }
     .burger.active span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 6px);
@@ -45,6 +56,14 @@
       box-shadow: 0 20px 40px rgba(232, 220, 196, 0.25);
     }
 
+    /* Member image - ensure proper fit */
+    .member-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
     /* Fade in animation */
     .fade-in {
       animation: fadeIn 0.6s ease-in;
@@ -52,6 +71,14 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile navbar visibility */
+    @media (max-width: 768px) {
+      .team-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
     }
   </style>
 </head>
@@ -107,7 +134,7 @@
       </div>
       
       <!-- Team Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
         
         <!-- Member 1 -->
         <a href="view/m_raihan_al_irsyad.html" class="team-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden block group">
@@ -115,13 +142,13 @@
             <img 
               src="images/anggota/m_raihan_al_irsyad.jpg" 
               alt="M. Raihan Al Irsyad" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">M. Raihan Al Irsyad</h3>
-            <p class="text-gray-400 text-sm">Admin</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">M. Raihan Al Irsyad</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Admin</p>
           </div>
         </a>
 
@@ -131,13 +158,13 @@
             <img 
               src="images/anggota/muhamad_rizki_firmansyah.jpg" 
               alt="Muhamad Rizki Firmansyah" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Muhamad Rizki F.</h3>
-            <p class="text-gray-400 text-sm">King Shiso</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Muhamad Rizki F.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">King Shiso</p>
           </div>
         </a>
 
@@ -147,13 +174,13 @@
             <img 
               src="images/anggota/muhammad_ariel_dwi_ardiansyah.jpg" 
               alt="Muhammad Ariel Dwi Ardiansyah" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Ariel D. A.</h3>
-            <p class="text-gray-400 text-sm">Keamanan</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Muhammad Ariel D. A.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Keamanan</p>
           </div>
         </a>
 
@@ -163,13 +190,13 @@
             <img 
               src="images/anggota/rizkyan_dwi_fahrizah.jpg" 
               alt="Rizkyan Dwi Fahrizah" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Rizkyan Dwi Fahrizah</h3>
-            <p class="text-gray-400 text-sm">Wakil Admin</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Rizkyan Dwi Fahrizah</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Wakil Admin</p>
           </div>
         </a>
 
@@ -179,13 +206,13 @@
             <img 
               src="images/anggota/mishbahul_ma_arif_al_jaly.jpg" 
               alt="Mishbahul ma'arif al jaly" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Mishbahul M. A. J.</h3>
-            <p class="text-gray-400 text-sm">Wakil Admin</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Mishbahul M. A. J.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Wakil Admin</p>
           </div>
         </a>
 
@@ -195,13 +222,13 @@
             <img 
               src="images/anggota/muhammad_fathoni_firdaus.jpg" 
               alt="Muhammad Fathoni Firdaus" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Fathoni F.</h3>
-            <p class="text-gray-400 text-sm">Admin Instagram</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Muhammad Fathoni F.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Admin Instagram</p>
           </div>
         </a>
 
@@ -211,13 +238,13 @@
             <img 
               src="images/anggota/muhammad_andreas_athallah_saifa_anam.jpg" 
               alt="Muhammad Andreas Athallah Saifa Anam" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Muhammad Andreas A.</h3>
-            <p class="text-gray-400 text-sm">Juru Koding</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Muhammad Andreas A.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Juru Koding</p>
           </div>
         </a>
 
@@ -227,13 +254,13 @@
             <img 
               src="images/anggota/rasya_aautar_ramadhani.jpg" 
               alt="Rasya Aautar Ramadhani" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="member-image group-hover:scale-110 transition-transform duration-500"
               loading="lazy"
             >
           </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-accent mb-2">Rasya Aautar R.</h3>
-            <p class="text-gray-400 text-sm">Admin Instagram</p>
+          <div class="p-3 sm:p-6 text-center">
+            <h3 class="text-sm sm:text-xl font-bold text-accent mb-1 sm:mb-2">Rasya Aautar R.</h3>
+            <p class="text-gray-400 text-xs sm:text-sm">Admin Instagram</p>
           </div>
         </a>
 
