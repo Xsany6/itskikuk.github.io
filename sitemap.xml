@@ -1,73 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-            <url>
-        <loc>https://itskikuk.my.id/</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <!-- ============================== -->
+  <!-- HALAMAN UTAMA                  -->
+  <!-- ============================== -->
+  <url>
+    <loc>https://itskikuk.my.id/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/group-photo.jpg</image:loc>
+      <image:title>Foto Bersama Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
 
-        <url>
-        <loc>https://itskikuk.my.id/documentation.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/news.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-            <url>
-        <loc>https://itskikuk.my.id/view/m_raihan_al_irsyad.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/muhamad_rizki_firmansyah.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/muhammad_ariel_dwi_ardiansyah.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/rizkyan_dwi_fahrizah.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/mishbahul_ma_arif_al_jaly.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/muhammad_fathoni_firdaus.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/muhammad_andreas_athallah_saifa_anam.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://itskikuk.my.id/view/rasya_aautar_ramadhani.html</loc>
-        <lastmod>2025-11-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
+  <!-- ============================== -->
+  <!-- HALAMAN TIM                    -->
+  <!-- ============================== -->
+  <url>
+    <loc>https://itskikuk.my.id/team.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================== -->
+  <!-- HALAMAN DOKUMENTASI            -->
+  <!-- ============================== -->
+  <url>
+    <loc>https://itskikuk.my.id/documentation.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================== -->
+  <!-- HALAMAN NEWS / BERITA          -->
+  <!-- ============================== -->
+  <url>
+    <loc>https://itskikuk.my.id/news.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================== -->
+  <!-- PROFIL ANGGOTA - M. Raihan     -->
+  <!-- ============================== -->
+  <url>
+    <loc>https://itskikuk.my.id/view/m_raihan_al_irsyad.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/m_raihan_al_irsyad.jpg</image:loc>
+      <image:title>M. Raihan Al Irsyad - Admin Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Muhamad Rizki Firmansyah -->
+  <url>
+    <loc>https://itskikuk.my.id/view/muhamad_rizki_firmansyah.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/muhamad_rizki_firmansyah.jpg</image:loc>
+      <image:title>Muhamad Rizki Firmansyah - Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Rizkyan Dwi Fahrizah -->
+  <url>
+    <loc>https://itskikuk.my.id/view/rizkyan_dwi_fahrizah.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/rizkyan_dwi_fahrizah.jpg</image:loc>
+      <image:title>Rizkyan Dwi Fahrizah - Wakil Admin Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Muhammad Ariel Dwi Ardiansyah -->
+  <url>
+    <loc>https://itskikuk.my.id/view/muhammad_ariel_dwi_ardiansyah.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/muhammad_ariel_dwi_ardiansyah.jpg</image:loc>
+      <image:title>Muhammad Ariel Dwi Ardiansyah - Keamanan Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Mishbahul Ma'arif Al Jaly -->
+  <url>
+    <loc>https://itskikuk.my.id/view/mishbahul_ma_arif_al_jaly.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/mishbahul_ma_arif_al_jaly.jpg</image:loc>
+      <image:title>Mishbahul Ma'arif Al Jaly - Wakil Admin Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Muhammad Fathoni Firdaus -->
+  <url>
+    <loc>https://itskikuk.my.id/view/muhammad_fathoni_firdaus.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/muhammad_fathoni_firdaus.jpg</image:loc>
+      <image:title>Muhammad Fathoni Firdaus - Admin Instagram Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Muhammad Andreas Athallah Saifa Anam -->
+  <url>
+    <loc>https://itskikuk.my.id/view/muhammad_andreas_athallah_saifa_anam.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/muhammad_andreas_athallah_saifa_anam.jpg</image:loc>
+      <image:title>Muhammad Andreas Athallah Saifa Anam - Juru Koding Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Rasya Aautar Ramadhani -->
+  <url>
+    <loc>https://itskikuk.my.id/view/rasya_aautar_ramadhani.html</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://itskikuk.my.id/images/anggota/rasya_aautar_ramadhani.jpg</image:loc>
+      <image:title>Rasya Aautar Ramadhani - Admin Instagram Kelompok Kikuk Kikuk</image:title>
+    </image:image>
+  </url>
 
 </urlset>
