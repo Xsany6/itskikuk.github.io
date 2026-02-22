@@ -1,0 +1,993 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+.contact-info a {
+    text-decoration: none;
+    color: white; 
+}
+
+
+.contact-info a:hover {
+    color: #cccccc; 
+    text-decoration: underline; 
+}
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #e8dcc4;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #999;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e8dcc4;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e8dcc4;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #e8dcc4;
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Animated burger -> transform into X when active */
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Increase touch target for burger */
+.burger {
+    padding: 6px;
+    border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    padding: 120px 40px 80px;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 60px;
+    margin-top: 120px;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex: 1.5;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-group-photo {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    border: 4px solid #e8dcc4;
+    box-shadow: 0 10px 30px rgba(232, 220, 196, 0.3);
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #e8dcc4;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #bbb;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(232, 220, 196, 0.05);
+    min-width: 150px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(232, 220, 196, 0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #e8dcc4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-team-preview {
+    margin-top: 60px;
+}
+
+.team-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 70px));
+    gap: 20px;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.team-preview-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e8dcc4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.team-preview-img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(232, 220, 196, 0.4);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-indicator::after {
+    content: '↓';
+    font-size: 2.5rem;
+    color: #e8dcc4;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+ .profile-image img,
+    .team-card-image-modern img,
+    .recommendation-image img,
+    .team-preview-img,
+    .team-preview-img img,
+    .hero-group-photo,
+    .hero-group-photo img {
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+/* Page Section */
+.page-section {
+    padding: 120px 40px 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section-title h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #e8dcc4;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Modern Team Grid */
+.team-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Modern Team Card */
+.team-card-modern {
+    background: #1a1a1a;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(232, 220, 196, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-modern:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(232, 220, 196, 0.3);
+    border-color: rgba(232, 220, 196, 0.4);
+}
+
+.team-card-image-modern {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card-image-modern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.team-card-modern:hover .team-card-image-modern img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 10, 0.7) 100%);
+    transition: background 0.4s ease;
+}
+
+.team-card-modern:hover .team-overlay {
+    background: linear-gradient(to bottom, transparent 0%, rgba(232, 220, 196, 0.2) 100%);
+}
+
+.team-card-content-modern {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-modern h3 {
+    font-size: 1.5rem;
+    color: #e8dcc4;
+    margin-bottom: 15px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.team-card-modern:hover h3 {
+    color: #fff;
+}
+
+.team-card-modern .description {
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: rgba(232, 220, 196, 0.15);
+    color: #e8dcc4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(232, 220, 196, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Profile Pages */
+.profile-section {
+    padding: 140px 40px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid #e8dcc4;
+    box-shadow: 0 10px 30px rgba(232, 220, 196, 0.3);
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: #e8dcc4;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #999;
+    font-style: italic;
+    margin: 0;
+}
+
+.profile-content {
+    display: grid;
+    gap: 50px;
+}
+
+.bio-section h2,
+.skills-section h2,
+.achievements-section h2,
+.contact-section h2 {
+    font-size: 1.8rem;
+    color: #e8dcc4;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.bio-section p {
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-item {
+    background: rgba(232, 220, 196, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(232, 220, 196, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(232, 220, 196, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(232, 220, 196, 0.3);
+}
+
+.skill-item h3 {
+    color: #e8dcc4;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.skill-item p {
+    color: #999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements-list li {
+    color: #bbb;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(232, 220, 196, 0.1);
+    position: relative;
+    padding-left: 30px;
+}
+
+.achievements-list li::before {
+    content: '✓';
+    color: #e8dcc4;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+.achievements-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-info p {
+    color: #bbb;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-info strong {
+    color: #e8dcc4;
+}
+
+.recommendations-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.recommendation-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(232, 220, 196, 0.1);
+}
+
+.recommendation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(232, 220, 196, 0.2);
+    border-color: rgba(232, 220, 196, 0.3);
+}
+
+.recommendation-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.recommendation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover .recommendation-image img {
+    transform: scale(1.1);
+}
+
+.recommendation-content {
+    padding: 20px;
+}
+
+.recommendation-content h3 {
+    color: #e8dcc4;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.recommendation-role {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.recommendation-description {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: #0a0a0a;
+    padding: 50px 40px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e8dcc4;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4c8b0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-grid-modern {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .profile-header {
+        gap: 30px;
+    }
+
+    .profile-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-info h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 40px 0;
+        border-top: 1px solid #2a2a2a;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero-stats {
+        gap: 40px;
+    }
+
+    .team-grid-modern {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .profile-section {
+        padding: 100px 20px 80px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .profile-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .page-section {
+        padding: 100px 20px 80px;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-left {
+        order: -1;
+    }
+
+    .hero-group-photo {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-right {
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-right p {
+        font-size: 1rem;
+        max-width: none;
+    }
+
+    .team-grid-modern {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .team-card-image-modern {
+        height: 280px;
+    }
+
+    .team-preview-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .team-preview-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-section {
+        padding: 80px 20px 60px;
+    }
+
+    .profile-header {
+        gap: 20px;
+    }
+
+    .profile-image img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .role {
+        font-size: 1.1rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .bio-section h2,
+    .skills-section h2,
+    .achievements-section h2,
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        gap: 20px;
+    }
+
+    .skill-item {
+        padding: 20px;
+    }
+
+    .recommendations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Ensure important profile/team images use cover on mobile to avoid unexpected stretching/cropping */
+    .profile-image img,
+    .team-card-image-modern img,
+    .recommendation-image img,
+    .team-preview-img,
+    .team-preview-img img,
+    .hero-group-photo,
+    .hero-group-photo img {
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .team-preview-grid {
+        gap: 10px;
+    }
+
+    .team-preview-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .team-card-image-modern {
+        height: 240px;
+    }
+
+    .team-card-content-modern {
+        padding: 25px 20px;
+    }
+
+    .team-card-modern h3 {
+        font-size: 1.3rem;
+    }
+
+    .team-card-modern .description {
+        font-size: 0.9rem;
+    }
+
+    .profile-section {
+        padding: 60px 15px 40px;
+    }
+
+    .profile-header {
+        gap: 15px;
+        padding: 35px;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .role {
+        font-size: 1rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .bio-section h2,
+    .skills-section h2,
+    .achievements-section h2,
+    .contact-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .bio-section p {
+        font-size: 0.95rem;
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
+
+    .skill-item h3 {
+        font-size: 1rem;
+    }
+
+    .skill-item p {
+        font-size: 0.9rem;
+    }
+
+    .achievements-list li {
+        padding-left: 25px;
+        font-size: 0.95rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    .recommendation-content h3 {
+        font-size: 1rem;
+    }
+
+    .recommendation-role {
+        font-size: 0.85rem;
+    }
+
+    .recommendation-description {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure important profile/team images use cover on very small screens (<=480px) */
+    .profile-image img,
+    .team-card-image-modern img,
+    .recommendation-image img,
+    .team-preview-img,
+    .team-preview-img img,
+    .hero-group-photo,
+    .hero-group-photo img {
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+}
