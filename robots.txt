@@ -1,0 +1,23 @@
+# ==========================================
+# robots.txt - itskikuk.my.id
+# Kelompok Kikuk Kikuk
+# ==========================================
+
+# Izinkan semua crawler (termasuk Google)
+User-agent: *
+Allow: /
+
+# Izinkan Googlebot secara spesifik
+User-agent: Googlebot
+Allow: /
+
+# Izinkan Google Image Bot (penting agar foto anggota terindeks)
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Izinkan Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Lokasi Sitemap
+Sitemap: https://itskikuk.my.id/sitemap.xml
